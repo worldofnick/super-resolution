@@ -1,3 +1,7 @@
+
+API implementation for Image Super Resolution:
+https://github.com/idealo/image-super-resolution
+
 # Docker for API
 
 You can build and run the docker using the following process:
