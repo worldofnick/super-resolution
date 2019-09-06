@@ -24,9 +24,13 @@ WORKDIR /src
 
 RUN pip install --upgrade pip
 
-#RUN pip install -e ".[gpu]" --ignore-installed
 RUN pip install -r requirements.txt
 
+EXPOSE 5000
+
+ENTRYPOINT ["python3"]
+
+CMD ["app.py"]
 
 
 
