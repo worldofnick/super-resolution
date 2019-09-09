@@ -82,7 +82,7 @@ def process():
             ])
 
 if __name__ == '__main__':
-    global upload_directory
+    global upload_directory, result_directory
     global model_directory
     global rdn
 
