@@ -105,7 +105,7 @@ INPUT
 EXECUTION
 
 ``` bash
-curl -X POST "https://api-market-place.ai.ovh.net/image-selfie2anime/process" -H "accept: application/json" -H "X-OVH-Api-Key: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" -H "Content-Type: application/json" -d '{"url":"https://i.ibb.co/TTQFWZS/input.png"}'
+curl -X POST "https://api-market-place.ai.ovh.net/image-super-resolution/process" -H "accept: application/json" -H "X-OVH-Api-Key: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" -H "Content-Type: application/json" -d '{"url":"https://i.ibb.co/TTQFWZS/input.png"}'
 ```
 
 - - -
