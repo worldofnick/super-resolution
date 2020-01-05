@@ -1,4 +1,5 @@
-tensorflow==1.15.0
+scikit-image
+tensorflow==1.14.0
 boto3==1.9.216
 requests
 flask
