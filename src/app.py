@@ -47,16 +47,26 @@ app = Flask(__name__)
 
 
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+
 @app.route("/process", methods=["POST"])
 def process():
 
     input_path = generate_random_filename(upload_directory,"jpg")
     output_path = generate_random_filename(result_directory,"jpg")
-
+    
     try:
-        url = request.json["url"]
-
-        download(url, input_path)
+        if 'file' in request.files:
+            file = request.files['file']
+            if allowed_file(file.filename):
+                file.save(input_path)
+            
+        else:
+            url = request.json["url"]
+            download(url, input_path)
 
         img = Image.open(input_path)
         img = img.convert('RGB')
@@ -85,6 +95,8 @@ if __name__ == '__main__':
     global upload_directory, result_directory
     global model_directory
     global rdn
+    global ALLOWED_EXTENSIONS
+    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
     result_directory = '/src/results/'
     create_directory(result_directory)

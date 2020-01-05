@@ -102,10 +102,14 @@ INPUT
 
 - - -
 
-EXECUTION
+EXECUTION FOR DISTANT FILE (URL)
 
 ``` bash
 curl -X POST "https://api-market-place.ai.ovh.net/image-super-resolution/process" -H "accept: application/json" -H "X-OVH-Api-Key: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" -H "Content-Type: application/json" -d '{"url":"https://i.ibb.co/TTQFWZS/input.png"}'
+```
+EXECUTION FOR LOCAL FILE (UPLOAD)
+```bash
+curl -X POST "https://api-market-place.ai.ovh.net/image-super-resolution/process" -H "accept: image/png" -H "X-OVH-Api-Key: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" -F file=@input.jpg
 ```
 
 - - -
